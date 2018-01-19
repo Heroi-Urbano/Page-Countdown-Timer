@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112572307-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112572307-1');
+</script>
+
+<meta charset="utf-8">
+
+<meta name="author" content="Herói Urbano">
+<meta name="description" content="Somos uma plataforma que une instituições sociais e de caridade a pessoas que tenham interesse em ajudar com doações.">
+<meta name="keywords" content="instituição, caridade, ong, ongs, doação">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herói Urbano - Unindo a boa ação à boa causa</title>
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/countdown.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<div id="preloader">
+  <div id="status"> <img src="img/preloader.gif" height="64" width="64" alt=""> </div>
+</div>
+
+<!-- Header -->
+<div id="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="logo-header">
+            <h1><img src="img/logo-intro.png" class="logo">
+            <!--Herói <span class="brand-heading">Urbano</span></h1>-->
+            <p class="intro-text">Unindo a boa ação à boa causa</p>
+          </div>
+          <div class="countdown-time col-md-12">
+            <span class="countdown-section">
+              <span class="countdown-amount"><h2 id="days">0</h2></span>
+              <span>Dias</span>
+            </span>
+            <span class="countdown-section">
+              <span class="countdown-amount"><h2 id="hours">0</h2></span>
+              <span>Horas</span>
+            </span>
+            <span class="countdown-section">
+              <span class="countdown-amount"><h2 id="minutes">0</h2></span>
+              <span>Minutos</span>
+            </span>
+            <span class="countdown-section">
+              <span class="countdown-amount"><h2 id="seconds">0</h2></span>
+              <span>Segundos</span>
+            </span>
+          </div><!--/.countdown-time -->
+          <div class="container-fluid">
+            <form name="sentMessage" id="contactForm" novalidate class="form-inline newsletter">
+              <div class="single">
+              <p>Informe abaixo seu e-mail e seja avisado de quando estivermos prontos.</p>
+                <div class="input-group col-md-12">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Informe seu melhor e-mail" required="required">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default">Quero!</button>
+                  </span>
+                </div>
+                  <p class="help-block text-danger"></p>
+                  <div id="success"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  
+      function countdown(){
+        var now = new Date();
+        var eventDate = new Date(2018, 01, 05);
+
+        var currentTiime = now.getTime();
+        var eventTime = eventDate.getTime();
+
+        var remTime = eventTime - currentTiime;
+        
+        if(remTime <= 0) {
+          document.getElementById('countdownContainer').style.display = 'none';
+          document.getElementById('greetingMsg').style.display = '';
+          return;
+        }
+
+        var s = Math.floor(remTime / 1000);
+        var m = Math.floor(s / 60);
+        var h = Math.floor(m / 60);
+        var d = Math.floor(h / 24);
+
+        h %= 24;
+        m %= 60;
+        s %= 60;
+
+        h = (h < 10) ? "0" + h : h;
+        m = (m < 10) ? "0" + m : m;
+        s = (s < 10) ? "0" + s : s;
+
+        document.getElementById("days").textContent = d;
+        document.getElementById("days").innerText = d;
+
+        document.getElementById("hours").textContent = h;
+        document.getElementById("minutes").textContent = m;
+        document.getElementById("seconds").textContent = s;
+
+        setTimeout(countdown, 1000);
+      }
+
+      countdown();
+    
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jquery.parallax.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
