@@ -252,14 +252,22 @@ color: #fff;
 
 /* Home Section */
 
+@keyframes FundoAnimado {
+	0% {
+		background-position: 50% 50%, 0 0, 50% 0%, 0 0, 0 40%;
+	}
+
+	100% {
+		background-position: 50% 50%, 100% 0, 80% 0%, 100% 0, 80% 0;
+	}
+}
+
 #intro {
 	display: table;
 	width: 100%;
 	height: auto;
-	padding: 100px 0;
 	text-align: center;
 	color: #fff;
-	/*background: url(../img/intro-jpg.jpg) no-repeat center center fixed;*/
 	background-color: #fff;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -267,8 +275,20 @@ color: #fff;
 	-o-background-size: cover;
 }
 
+#intro .header {
+	background: #56d0ffd9;
+	background-image: url(../img/hu.png), url(../img/bg_1.png), url(../img/nuvem_2.png), url(../img/bg_2.png), url(../img/nuvem_1.png);
+	background-repeat: no-repeat, repeat-x, no-repeat, repeat-x, no-repeat;
+	-webkit-background-size: 100px, cover, 200px, cover, 100px;
+	-moz-background-size: 100px, cover, 200px, cover, 100px;
+	background-size: 100px, cover, 200px, cover, 100px;
+	-o-background-size: 100px, cover, 200px, cover, 100px;
+	height: 250px;
+	animation: FundoAnimado 20s linear infinite;
+}
+
 #intro .logo {
-	width: 200px;
+	width: 400px;
 	margin-left: -80px;
 }
 
@@ -291,6 +311,11 @@ color: #fff;
 	color: #cd4b4a;
 }
 
+#intro .intro-description {
+	color: #555;
+	font-size: 16px;
+}
+
 @media(min-width:768px) {
 #intro {
 	height: 100%;
@@ -299,6 +324,7 @@ color: #fff;
 #intro .intro-body .intro-text {
 	font-size: 18px;
 	letter-spacing: 1px;
+	margin-top: -120px;
 	margin-bottom: 30px;
 	color: rgb(205, 75, 74);
 }
@@ -703,4 +729,66 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #intro .intro-body H1 {
 	font-size: 3em;
 }
+}
+
+footer.page-footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+footer.page-footer .social-section ul li {
+	display: inline-block;
+}
+
+footer.page-footer .social-section ul a {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.btn-floating {
+	position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #a6c;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.btn-floating.btn-sm, .btn-floating.btn-small, .btn-floating.wishlist {
+	    width: 36.15385px;
+    height: 36.15385px;
+}
+
+.btn-floating.btn-sm i, .btn-floating.btn-small i, .btn-floating.wishlist i {
+	font-size: 2rem;
+	line-height: 36.15385px;
+}
+
+.btn-tw {
+	background-color: #55acee!important;
+    color: #fff!important;
+}
+
+.btn-fb {
+	background-color: #3b5998!important;
+    color: #fff!important;
+}
+
+.btn-ig {
+	background-color: #ec4a89!important;
+    color: #fff!important;
+}
+
+.footer-copyright {
+	color: #555;
+	height: 30px;
 }
